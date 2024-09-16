@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./download-removebg-preview.png" type="image/x-icon">
+    <title>Mini Greeting App</title>
+</head>
+<style>
+body{
+    text-align: center;
+    background-color: rgb(248, 185, 206);
+}
+::selection{
+    background-color:white ;
+    color:rgb(243, 92, 117);
+}
+h1{
+    text-decoration: 2px solid black underline;
+    cursor: pointer;
+}
+button{
+    height: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+button:hover{
+    background-color: rgb(243, 92, 117);
+    color: white;
+    border: 2px solid white;
+}
+p{
+    color: rgb(243, 92, 117);
+    font-weight: 700;
+    font-size: 25px;
+    text-decoration: 2px solid  rgb(243, 92, 117) underline;
+}
+</style>
+<body>
+    <h1>Welcome to Personalized greeting app</h1>
+    <button onclick="greetingSystem()">Get Greeting</button>
+    <p id="firstPara"></p> 
+    <img src="gif.gif" alt="" width="200px" height="150px">
+</body>
+<script>
+ function greetingSystem(){
+            let name=prompt("Enter Your name");
+            let age=prompt("Enter your age");
+
+            if(age>=18){
+                document.getElementById('firstPara').innerHTML=(`Welcome ${name}! Hope you're having a great day!`);
+            }
+            else if(age<17){
+                document.getElementById('firstPara').innerHTML=(`Opppss! Sorry ${name}, you are too young to join`);
+            }
+            else{
+                document.write("Enter your details again");
+            }
+        };
+</script>
+</html>
